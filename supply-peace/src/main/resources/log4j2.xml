@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Configuration strict="true">
     <Properties>
-        <Property name="filename">supply_chain.log</Property>
+        <Property name="log_filename">supply_chain_unrolled.log</Property>
     </Properties>
 
     <Appenders>
 
-        <Appender type="File" name="SingleFileAppender" fileName="${filename}">
+        <Appender type="File" name="singleFileAppender" fileName="supply_chain_unrolled.log">
             <Layout type="PatternLayout">
                 <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
             </Layout>
         </Appender>
 
-        <RollingFile name="RollingFileAppender" fileName="supply_chain_rolled.log"
+        <RollingFile name="rollingFileAppender" fileName="supply_chain_rolled.log"
                      filePattern="$${date:yyyy-MM}/app-%d{yyyy-MM-dd-HH}-%i.log.gz">
             <PatternLayout>
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
@@ -26,7 +26,7 @@
 
     <Loggers>
         <Root level="debug">
-            <AppenderRef ref="RollingFileAppender"/>
+            <AppenderRef ref="singleFileAppender"/>
         </Root>
     </Loggers>
 </Configuration>

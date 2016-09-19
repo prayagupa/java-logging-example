@@ -13,5 +13,6 @@ public class SupplyChainLogger {
 
     public static void main(String[] args) {
         logger.debug("I'm Hunter Thomson");
+        logger.debug("Exception occured ", new Exception("some exception"));
     }
 }
