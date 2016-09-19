@@ -1,9 +1,79 @@
-2016-09-19 12:11:13,697 DEBUG l.SupplyChainLogger [main] I'm Hunter Thomson
-2016-09-19 12:11:13,731 DEBUG l.SupplyChainLogger [main] Exception occured 
-java.lang.Exception: some exception
-	at logger.SupplyChainLogger.main(SupplyChainLogger.java:16) [classes/:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
-	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:?]
+{
+  "timeMillis" : 1474313019995,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "I'm Hunter Thomson",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+, {
+  "timeMillis" : 1474313020787,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "Exception occured ",
+  "thrown" : {
+    "commonElementCount" : 0,
+    "localizedMessage" : "some exception",
+    "message" : "some exception",
+    "name" : "java.lang.Exception",
+    "extendedStackTrace" : [ {
+      "class" : "logger.SupplyChainLogger",
+      "method" : "main",
+      "file" : "SupplyChainLogger.java",
+      "line" : 16,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    }, {
+      "class" : "sun.reflect.NativeMethodAccessorImpl",
+      "method" : "invoke0",
+      "file" : "NativeMethodAccessorImpl.java",
+      "line" : -2,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.7.0_79"
+    }, {
+      "class" : "sun.reflect.NativeMethodAccessorImpl",
+      "method" : "invoke",
+      "file" : "NativeMethodAccessorImpl.java",
+      "line" : 57,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.7.0_79"
+    }, {
+      "class" : "sun.reflect.DelegatingMethodAccessorImpl",
+      "method" : "invoke",
+      "file" : "DelegatingMethodAccessorImpl.java",
+      "line" : 43,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.7.0_79"
+    }, {
+      "class" : "java.lang.reflect.Method",
+      "method" : "invoke",
+      "file" : "Method.java",
+      "line" : 606,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.7.0_79"
+    }, {
+      "class" : "com.intellij.rt.execution.application.AppMain",
+      "method" : "main",
+      "file" : "AppMain.java",
+      "line" : 147,
+      "exact" : true,
+      "location" : "idea_rt.jar",
+      "version" : "?"
+    } ]
+  },
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+
+]

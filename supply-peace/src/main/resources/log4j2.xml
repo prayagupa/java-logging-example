@@ -7,9 +7,7 @@
     <Appenders>
 
         <Appender type="File" name="singleFileAppender" fileName="supply_chain_unrolled.log">
-            <Layout type="PatternLayout">
-                <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
-            </Layout>
+            <JSONLayout complete="true" compact="false"/>
         </Appender>
 
         <RollingFile name="rollingFileAppender" fileName="supply_chain_rolled.log"
