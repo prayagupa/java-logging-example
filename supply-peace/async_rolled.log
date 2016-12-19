@@ -1,0 +1,88 @@
+[
+{
+  "timeMillis" : 1482116650772,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "suppliesLogger",
+  "message" : "I'm Hunter Thomson and I'm alive.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+, {
+  "timeMillis" : 1482116650843,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "suppliesLogger",
+  "message" : "Peace is failing ",
+  "thrown" : {
+    "commonElementCount" : 0,
+    "localizedMessage" : "I'm Lunatic exception",
+    "message" : "I'm Lunatic exception",
+    "name" : "java.lang.Exception",
+    "extendedStackTrace" : [ {
+      "class" : "logger.SupplyChainPeaceLogger$",
+      "method" : "main",
+      "file" : "SupplyChainPeaceLogger.scala",
+      "line" : 18,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    }, {
+      "class" : "logger.SupplyChainPeaceLogger",
+      "method" : "main",
+      "file" : "SupplyChainPeaceLogger.scala",
+      "line" : -1,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    }, {
+      "class" : "sun.reflect.NativeMethodAccessorImpl",
+      "method" : "invoke0",
+      "file" : "NativeMethodAccessorImpl.java",
+      "line" : -2,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.8.0_111"
+    }, {
+      "class" : "sun.reflect.NativeMethodAccessorImpl",
+      "method" : "invoke",
+      "file" : "NativeMethodAccessorImpl.java",
+      "line" : 62,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.8.0_111"
+    }, {
+      "class" : "sun.reflect.DelegatingMethodAccessorImpl",
+      "method" : "invoke",
+      "file" : "DelegatingMethodAccessorImpl.java",
+      "line" : 43,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.8.0_111"
+    }, {
+      "class" : "java.lang.reflect.Method",
+      "method" : "invoke",
+      "file" : "Method.java",
+      "line" : 498,
+      "exact" : false,
+      "location" : "?",
+      "version" : "1.8.0_111"
+    }, {
+      "class" : "com.intellij.rt.execution.application.AppMain",
+      "method" : "main",
+      "file" : "AppMain.java",
+      "line" : 147,
+      "exact" : true,
+      "location" : "idea_rt.jar",
+      "version" : "?"
+    } ]
+  },
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+
+]
