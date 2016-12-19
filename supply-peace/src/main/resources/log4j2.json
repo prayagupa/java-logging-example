@@ -3,27 +3,28 @@
     "name": "logggg",
     "appenders": {
       "RollingFile": {
-        "name":"rollingStone",
-        "fileName":"supply_chain_rolled.log",
-        "filePattern":"%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "name": "rollingStone",
+        "fileName": "async_rolled.log",
+        "filePattern": "async_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "immediateFlush" : false,
         "JSONLayout": {
-          "complete" : true
+          "complete": true,
+          "compact": false,
+          "eventEol": true
         },
-        "Policies": {
-          "SizeBasedTriggeringPolicy": {
-            "size":"10 MB"
-          }
+        "SizeBasedTriggeringPolicy": {
+          "size": "10 MB"
         },
         "DefaultRolloverStrategy": {
-          "max":"10"
+          "max": "10"
         }
       }
     },
     "loggers": {
       "root": {
-        "level":"debug",
+        "level": "debug",
         "appender-ref": {
-          "ref":"rollingStone"
+          "ref": "rollingStone"
         }
       }
     }
