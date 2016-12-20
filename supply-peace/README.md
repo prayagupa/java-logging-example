@@ -5,15 +5,15 @@ Demo for sync/async log4j2
 {
   "configuration": {
     "name": "logggg",
+    "packages" : "logger.savemyjob",
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
-        "fileName": "sync_rolled.log",
-        "filePattern": "%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
-        "JSONLayout": {
-          "complete": true,
-          "compact": false,
-          "eventEol": true
+        "fileName": "async_rolled.log",
+        "filePattern": "async_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "immediateFlush" : false,
+        "PatternLayout" : {
+          "pattern" : "{timestamp : %timestamp, message: %m%n}"
         },
         "SizeBasedTriggeringPolicy": {
           "size": "10 MB"
@@ -38,14 +38,10 @@ Demo for sync/async log4j2
 TODO
 ----
 
-set `-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
-
 run the class `SupplyChainPeaceLogger`
 
-`cat sync_rolled.log` would result `%d %p %c{1.} [%t] %m%n`
+`cat async_rolled.log` would result 
 
 ```
-| %d        | %p           | %c    | %t                    | %n
-------------|--------------|-------|-----------------------|---------------------------------
-|2016-09-17 | 19:47:18,131 | DEBUG | suppliesLogger [main] | I'm Hunter Thomson and I'm alive.
+{timestamp : Mon Dec 19 21:28:08 PST 2016, message: Peace is failing }
 ```
