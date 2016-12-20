@@ -73,8 +73,13 @@ public abstract class AbstractJSONLayout extends AbstractStringLayout {
         // TODO Jackson-based layouts have certain filters set up for Log4jLogEvent.
         // TODO Need to set up the same filters for MutableLogEvent but don't know how...
         // This is a workaround.
-        LogEvent l = event instanceof MutableLogEvent ? ((MutableLogEvent) event).createMemento() : event;
+        LogEvent l = event instanceof MutableLogEvent ? createMemento(event) : event;
+
         return DnLogEvent.fromLog4jEvent(l);
+    }
+
+    private static LogEvent createMemento(LogEvent event) {
+        return DnLogEvent.deserialize(DnLogEvent.serialize(event, event.isIncludeLocation()));
     }
 
     public void toSerializable(final LogEvent event, final Writer writer)

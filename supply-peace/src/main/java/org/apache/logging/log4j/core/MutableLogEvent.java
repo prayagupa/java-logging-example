@@ -38,4 +38,6 @@ import java.util.Map;
  * @since 2.6
  */
 public class MutableLogEvent {
+
+
 }
