@@ -15,6 +15,6 @@ object SupplyChainPeaceLogger {
     val setup = new Setup
     println(System.getProperty("something"))
     logger.debug("I'm Hunter Thomson and I'm alive.")
-    logger.debug("Peace is failing ", new Exception("I'm Lunatic exception"))
+    logger.debug("Peace is failing {}", new Exception("I'm Lunatic exception"))
   }
 }

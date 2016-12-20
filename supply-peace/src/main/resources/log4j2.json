@@ -1,20 +1,17 @@
 {
   "configuration": {
     "name": "logggg",
-    "packages" : "logger.savemyjob",
+    "packages" : "org.apache.logging.log4j.core.layout",
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
         "fileName": "async_rolled.log",
         "filePattern": "async_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
         "immediateFlush" : false,
-//        "JSONLayout": {
-//          "complete": true,
-//          "compact": false,
-//          "eventEol": true
-//        },
-        "PatternLayout" : {
-          "pattern" : "{timestamp : %timestamp, message: %m%n}"
+        "DnLayout": {
+          "complete": true,
+          "compact": false,
+          "eventEol": true
         },
         "SizeBasedTriggeringPolicy": {
           "size": "10 MB"
