@@ -4,16 +4,16 @@
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
-        "fileName": "async_rolled.log",
-        "filePattern": "async_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "fileName": "async_rolled_threadsafe.log",
+        "filePattern": "async_rolled_threadsafe-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
         "immediateFlush" : false,
         "JSONLayout": {
-          "complete": true,
-          "compact": false,
+          "complete": false,
+          "compact": true,
           "eventEol": true
         },
         "SizeBasedTriggeringPolicy": {
-          "size": "10 MB"
+          "size": "1000 MB"
         },
         "DefaultRolloverStrategy": {
           "max": "10"
