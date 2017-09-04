@@ -9,8 +9,11 @@ import org.apache.logging.log4j.{LogManager, Logger}
   */
 object BenchingAmark {
 
-  private val CONCURRENT_REQUESTS: Int = 32
-  private val EACH_REQUEST_ITERATIONS: Int = 100
+  val data = "<note><to>Sylvia</to><from>Prayag</from><heading>Reminder</heading><body>Don't forget me this weekend!</body></note>"
+
+  val CONCURRENT_REQUESTS: Int = 1
+  val EACH_REQUEST_ITERATIONS: Int = 1
+  val EACH_JOKER_ITERATIONS: Int = 1
 
   val concurrentLoggers: util.List[BenchmarkThread] =
     new util.ArrayList[BenchmarkThread]
@@ -21,14 +24,14 @@ object BenchingAmark {
     val logger: Logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME)
 
     for (requestId <- 1 to CONCURRENT_REQUESTS) {
-      concurrentLoggers.add(new BenchmarkThread("ConcurrentRequest" + requestId, EACH_REQUEST_ITERATIONS, logger))
+      concurrentLoggers.add(new BenchmarkThread("ConcurrentRequest_" + requestId, EACH_REQUEST_ITERATIONS, logger))
     }
 
     logger.debug("-----------------------------------------------------------")
     logger.debug("----------------------  Joker -----------------------------")
     logger.debug("-----------------------------------------------------------")
 
-    jokerDoesBenchmark("Joker", 100, logger)
+    jokerDoesBenchmark("Joker_As_Writer", EACH_JOKER_ITERATIONS, logger)
 
     Thread.sleep(100)
 
@@ -53,8 +56,10 @@ object BenchingAmark {
 
   protected def jokerDoesBenchmark(name: String, iterations: Int, logger: Logger) {
     for (i <- 1 to iterations) {
-    println(i + " -> "  + iterations)
-      logger.info("{};{}", name, i)
+      if(i == iterations) {
+        println(i + " -> " + iterations)
+      }
+      logger.info("{}:request {} - {}", name, i, data)
     }
   }
 }

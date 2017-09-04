@@ -56,15 +56,45 @@ Millis":1482343311311,"thread":"Thread-16","level":"INFO","message":"ConcurrentR
 
 ```
 
+with 32 concurrent requests writing 200 writes each, there should have been 6400 logs but happens to be only around 5880, which is totally 
+unacceptable. Mate, this is in prod for a big company which claims they have great technology.
+
 With Async logging, 
 
 ```
+`-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
+```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Don't forget to set system property
+-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+     to make all loggers asynchronous. -->
+
+<Configuration status="INFO">
+  <Appenders>
+    <!-- Async Loggers will auto-flush in batches, so switch off immediateFlush. -->
+    <RollingFile name="rollingStone" fileName="async.log" immediateFlush="false" append="true"
+                 filePattern="logs/async-%d{MM-dd-yyyy}-%i.log.gz">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+      </PatternLayout>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="2 KB"/>
+      </Policies>
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Root level="debug" includeLocation="false">
+      <AppenderRef ref="rollingStone"/>
+    </Root>
+  </Loggers>
+</Configuration>
 
 ```
 
-TODO
-----
+all 6400 writes are there in a file.
 
-set `-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
 
-run the class `Joker`
+run the class `Joker` changing log4j2.json file pointer to `_threadsafe.log`

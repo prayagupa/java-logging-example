@@ -17,3 +17,7 @@ libraryDependencies += "com.fasterxml.jackson.core" % "jackson-core" % "2.4.0"
 libraryDependencies += "com.fasterxml.jackson.core" % "jackson-annotations" % "2.4.0"
 
 libraryDependencies += "org.json" % "org.json" % "2.0"
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
