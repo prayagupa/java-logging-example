@@ -1,5 +1,4 @@
 {
-  "timeMillis" : 1561836980745,
   "thread" : "main",
   "level" : "DEBUG",
   "loggerName" : "logger.SupplyChainLogger",
@@ -7,10 +6,13 @@
   "endOfBatch" : false,
   "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
   "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1561837404,
+    "nanoOfSecond" : 996203000
+  },
   "threadPriority" : 5
 }
 , {
-  "timeMillis" : 1561836980818,
   "thread" : "main",
   "level" : "DEBUG",
   "loggerName" : "logger.SupplyChainLogger",
@@ -33,6 +35,10 @@
   "endOfBatch" : false,
   "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
   "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1561837405,
+    "nanoOfSecond" : 120266000
+  },
   "threadPriority" : 5
 }
 

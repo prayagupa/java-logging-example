@@ -7,8 +7,8 @@
     <version>0.1-SNAPSHOT</version>
 
     <properties>
-        <json-encoder.version>2.4.0</json-encoder.version>
-        <log4j-core.version>2.6.2</log4j-core.version>
+        <json-encoder.version>2.9.9</json-encoder.version>
+        <log4j-core.version>2.12.0</log4j-core.version>
     </properties>
 
     <name>supply logger</name>
