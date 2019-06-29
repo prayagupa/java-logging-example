@@ -1,11 +1,11 @@
 {
   "configuration": {
-    "name": "logggg",
+    "name": "app_logging",
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
-        "fileName": "async_rolled.log",
-        "filePattern": "async_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "fileName": "async_json_rolled.log",
+        "filePattern": "async_json_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
         "immediateFlush" : false,
         "JSONLayout": {
           "complete": true,

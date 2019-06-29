@@ -2,7 +2,7 @@ name := "log-collector"
 
 version := "1.0"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.8"
 
 libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.6.2"
 

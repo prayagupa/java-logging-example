@@ -1,0 +1,40 @@
+[
+{
+  "timeMillis" : 1561836543685,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "I'm Hunter Thomson",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+, {
+  "timeMillis" : 1561836544013,
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "Exception occured ",
+  "thrown" : {
+    "commonElementCount" : 0,
+    "localizedMessage" : "some exception",
+    "message" : "some exception",
+    "name" : "java.lang.Exception",
+    "extendedStackTrace" : [ {
+      "class" : "logger.SupplyChainLogger",
+      "method" : "main",
+      "file" : "SupplyChainLogger.java",
+      "line" : 24,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    } ]
+  },
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+
+]

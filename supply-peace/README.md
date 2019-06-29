@@ -1,5 +1,6 @@
 
 Demo for sync/async log4j2
+--
 
 ```
 {
@@ -40,7 +41,7 @@ TODO
 
 set `-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector`
 
-run the class `SupplyChainPeaceLogger`
+run the class `SupplyChainLogger`
 
 `cat sync_rolled.log` would result `%d %p %c{1.} [%t] %m%n`
 

@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
  */
 
 public class Setup {
+
     static {
         initIt("from static");
     }
@@ -18,7 +19,7 @@ public class Setup {
     }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         initIt("Post Construct");
     }
 }
