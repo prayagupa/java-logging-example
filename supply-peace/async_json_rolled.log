@@ -1,17 +1,16 @@
-[
 {
-  "timeMillis" : 1561836543685,
+  "timeMillis" : 1561836980745,
   "thread" : "main",
   "level" : "DEBUG",
   "loggerName" : "logger.SupplyChainLogger",
-  "message" : "I'm Hunter Thomson",
+  "message" : "I'm Hunter Thomson - 2019-06-29",
   "endOfBatch" : false,
   "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
   "threadId" : 1,
   "threadPriority" : 5
 }
 , {
-  "timeMillis" : 1561836544013,
+  "timeMillis" : 1561836980818,
   "thread" : "main",
   "level" : "DEBUG",
   "loggerName" : "logger.SupplyChainLogger",
@@ -25,7 +24,7 @@
       "class" : "logger.SupplyChainLogger",
       "method" : "main",
       "file" : "SupplyChainLogger.java",
-      "line" : 24,
+      "line" : 26,
       "exact" : true,
       "location" : "classes/",
       "version" : "?"
