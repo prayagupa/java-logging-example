@@ -4,8 +4,8 @@
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
-        "fileName": "async_json_rolled.log",
-        "filePattern": "async_json_rolled-%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "fileName": "logs/async_json_rolled.log",
+        "filePattern": "logs/async_json_rolled-%d{MM-dd-yy-HH}-%i.log.gz",
         "immediateFlush" : false,
         "JSONLayout": {
           "complete": true,
@@ -13,10 +13,28 @@
           "eventEol": true
         },
         "SizeBasedTriggeringPolicy": {
-          "size": "10 MB"
+          "size": "1 MB"
         },
         "DefaultRolloverStrategy": {
-          "max": "10"
+          "max": "2",
+          "Delete": {
+            "basePath": "logs",
+            "maxDepth": "2",
+            "IfFileName": {
+              "glob": "async_json_rolled*.log.gz",
+              "IfLastModified": {
+                "age": "30d",
+                "IfAny": {
+                  "IfAccumulatedFileSize": {
+                    "exceeds": "3 MB"
+                  },
+                  "IfAccumulatedFileCount": {
+                    "exceeds": "2"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },

@@ -1,0 +1,91 @@
+[
+{
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "I'm Hunter Thomson - 2019-08-31",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1567296287,
+    "nanoOfSecond" : 70694000
+  },
+  "threadPriority" : 5
+}
+, {
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "Exception occured ",
+  "thrown" : {
+    "commonElementCount" : 0,
+    "localizedMessage" : "some exception",
+    "message" : "some exception",
+    "name" : "java.lang.Exception",
+    "extendedStackTrace" : [ {
+      "class" : "logger.SupplyChainLogger",
+      "method" : "main",
+      "file" : "SupplyChainLogger.java",
+      "line" : 26,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    } ]
+  },
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1567296287,
+    "nanoOfSecond" : 126679000
+  },
+  "threadPriority" : 5
+}
+
+]
+{
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "I'm Hunter Thomson - 2019-08-31",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1567296319,
+    "nanoOfSecond" : 966779000
+  },
+  "threadPriority" : 5
+}
+, {
+  "thread" : "main",
+  "level" : "DEBUG",
+  "loggerName" : "logger.SupplyChainLogger",
+  "message" : "Exception occured ",
+  "thrown" : {
+    "commonElementCount" : 0,
+    "localizedMessage" : "some exception",
+    "message" : "some exception",
+    "name" : "java.lang.Exception",
+    "extendedStackTrace" : [ {
+      "class" : "logger.SupplyChainLogger",
+      "method" : "main",
+      "file" : "SupplyChainLogger.java",
+      "line" : 26,
+      "exact" : true,
+      "location" : "classes/",
+      "version" : "?"
+    } ]
+  },
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "instant" : {
+    "epochSecond" : 1567296320,
+    "nanoOfSecond" : 19573000
+  },
+  "threadPriority" : 5
+}
+
+]

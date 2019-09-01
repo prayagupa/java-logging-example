@@ -13,9 +13,9 @@ import java.util.UUID;
 
 public class SupplyChainLogger {
 
-    private static Logger logger = LogManager.getLogger(SupplyChainLogger.class);
+    private static final Logger logger = LogManager.getLogger(SupplyChainLogger.class);
 
-    Setup setup = new Setup();
+    private Setup setup = new Setup();
 
     public static void main(String[] args) {
 
@@ -28,7 +28,7 @@ public class SupplyChainLogger {
         System.out.println("logging debug enabled: " + logger.isDebugEnabled());
 
         while(true) {
-//            System.out.println("Process is running");
+            //logger.info("Process is running");
         }
     }
 }
