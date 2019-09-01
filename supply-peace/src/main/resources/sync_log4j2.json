@@ -4,8 +4,8 @@
     "appenders": {
       "RollingFile": {
         "name": "rollingStone",
-        "fileName": "sync_rolled.log",
-        "filePattern": "%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
+        "fileName": "logs/sync_rolled.log",
+        "filePattern": "logs/%d{MM-dd-yy-HH-mm-ss}-%i.log.gz",
         "JSONLayout": {
           "complete": true,
           "compact": false,
