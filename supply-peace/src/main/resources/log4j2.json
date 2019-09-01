@@ -19,7 +19,7 @@
           "max": "2",
           "Delete": {
             "basePath": "logs",
-            "maxDepth": "2",
+            "maxDepth": "1",
             "IfFileName": {
               "glob": "async_json_rolled*.log.gz",
               "IfLastModified": {
